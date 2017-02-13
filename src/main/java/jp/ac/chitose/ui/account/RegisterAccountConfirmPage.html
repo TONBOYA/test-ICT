@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-10">
+					<div class="col-xs-10">
+						<div class="col-xs-offset-1">
+							<div class="row">
+								<div class="col-xs-offset-1">
+									<h2>アカウントの登録確認ページ</h2>
+									<p>入力した情報を確認してください</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1 backcolor-gray radius-form">
+							<div class="col-xs-offset-2 margin-form">
+								<div class="row">
+									<p class="col-xs-3">ログインID</p>
+									<p class="col-xs-4" wicket:id="loginName">入力した内容</p>
+								</div>
+								<br>
+								<div class="row">
+									<p class="col-xs-3">パスワード</p>
+									<p class="col-xs-4">セキュリティの面から非表示にしています</p>
+								</div>
+								<br>
+								<div class="row">
+									<p class="col-xs-3">名前</p>
+									<p class="col-xs-4" wicket:id="name">入力した内容</p>
+								</div>
+								<br>
+								<div class="row">
+									<p class="col-xs-3">所属学校</p>
+									<p class="col-xs-4" wicket:id="belongSchool">入力した内容</p>
+								</div>
+								<br>
+								<div class="row">
+									<p class="col-xs-3">Eメールアドレス</p>
+									<p class="col-xs-4" wicket:id="emailAddress">入力した内容@gmail.com</p>
+								</div>
+								<br>
+								<div class="row">
+									<p class="col-xs-3">権限</p>
+									<p class="col-xs-4" wicket:id="role">選択した権限</p>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-xs-4">
+										<button type="button" class="btn btn-default"
+											wicket:id="toTryRegisterAccountPage">内容を変更する</button>
+									</div>
+									<div class="col-xs-4">
+										<button type="button" class="btn btn-default"
+											wicket:id="toRegisterAccountCompletedPage">この内容でアカウント登録する</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+</body>
+</html>

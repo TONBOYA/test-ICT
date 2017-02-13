@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<wicket:extend>
+		<div class="container">
+			<h2 class="text-center">関連取り消し確認ページ</h2>
+			<div class="row">
+				<div class="col-xs-offset-3">
+				</div>
+				<div class="col-xs-offset-3 col-xs-6">
+
+					<div class="text-center">
+						<h4>
+							<span>コンテンツと実践の関連を取り消します </span>
+
+						</h4>
+					</div>
+					<div class="text-center">
+						<h4>
+							<span>コンテンツとの関連を取り消して実践を保存しますか </span>
+
+						</h4>
+					</div>
+
+
+					<br> <br>
+					<div class="col-xs-offset-2">
+						<button class="btn btn-default"
+							wicket:id="toCancelCompletedPage">関連を取り消して登録する</button>
+							<button class="btn btn-default" wicket:id="toPracticeContentPage">前のページへ戻る</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+
+</body>
+</html>

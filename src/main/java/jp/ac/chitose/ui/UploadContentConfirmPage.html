@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-6">
+
+					<p>こちらの内容でよろしいですか？</p>
+					
+					<div class="row">
+						<p class="col-xs-3">コンテンツ名</p>
+						<p class="col-xs-3">入力した内容</p>
+					</div>
+					<div class="row">
+						<p class="col-xs-3">検索用キーワード</p>
+						<p class="col-xs-3">タブレット、生徒配布用</p>
+					</div>
+					<div class="row">
+						<p class="col-xs-3">ファイル名</p>
+						<p class="col-xs-3">選択したファイル名</p>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-5">
+							<button type="button" class="btn btn-default" wicket:id="toUplaodContentCompletedPage">この内容でアップロードする</button>
+						</div>
+						
+						<div class="col-xs-5">
+							<button type="button" class="btn btn-default" wicket:id="toUploadContentPage">内容を修正する</button>
+						</div>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+
+
+</body>
+</html>

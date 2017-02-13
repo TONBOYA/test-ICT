@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<wicket:panel>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<p class="text-center">
+						<!-- 展開( <span wicket:id="ordinalForHeading"></span> / <span
+							wicket:id="maxUnfoldingForHeading"></span> ) -->
+							展開 0<span wicket:id="ordinalForHeading"></span>
+					</p>
+				</div>
+				<div class="panel-body">
+
+					<div class="row">
+						<span class="col-xs-5 col-xs-offset-1"> 展開名</span>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-xs-10 col-xs-offset-1">
+								<input type="text" class="form-control" wicket:id="name" />
+							</div>
+						</div>
+					</div>
+					<br> <br>
+					<div class="row">
+						<span class="col-xs-5 col-xs-offset-1"> 展開の時間
+						</span>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-xs-4 col-xs-offset-1">
+								<select class="selectpicker" wicket:id="requiredMinute">
+									<option>0</option>
+									<option>5</option>
+									<option>10</option>
+									<option>15</option>
+									<option>20</option>
+									<option>25</option>
+									<option>30</option>
+									<option>35</option>
+									<option>40</option>
+									<option>45</option>
+									<option>50</option>
+									<option>55</option>
+									<option>60</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<br> <br>
+					<div class="row">
+						<span class="col-xs-5 col-xs-offset-1"> 授業内容</span>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-xs-9 col-xs-offset-1">
+								<textarea class="form-control" wicket:id="instruction"></textarea>
+								<script type="text/javascript">
+									function resize(Tarea) {
+										var areaH = Tarea.style.height;
+										areaH = parseInt(areaH) - 54;
+										if (areaH < 30) {
+											areaH = 30;
+										}
+										Tarea.style.height = areaH + "px";
+										Tarea.style.height = parseInt(Tarea.scrollHeight + 30)
+												+ "px";
+									}
+									// ドキュメント内の全てのテキストエリアを走査して高さ調整関数を適用します
+									onload = function() {
+										var els = document
+												.getElementsByTagName('textarea');
+										for (var i = 0; i < els.length; i++) {
+											var obj = els[i];
+											resize(obj);
+											obj.onkeyup = function() {
+												resize(this);
+											}
+										}
+									}
+								</script>
+							</div>
+						</div>
+					</div>
+					<br> <br>
+					<div class="row">
+						<span class="col-xs-5 col-xs-offset-1">展開に画像を添付</span>
+					</div>
+					<div class="col-xs-6" wicket:id="firstScenePanel"></div>
+					<div class="col-xs-5" wicket:id="secondScenePanel"></div>
+
+					<br> <br>
+					<div class="row">
+						<span class="col-xs-5 col-xs-offset-1"> 指導のポイント</span>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-xs-9 col-xs-offset-1">
+								<textarea class="form-control" wicket:id="specialInstruction"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:panel>
+</body>
+</html>

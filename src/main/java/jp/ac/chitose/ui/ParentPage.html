@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title wicket:id="title"></title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<!-- ナビゲーションバー設定 -->
+	<div class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<!-- ヘッダ -->
+			<div class="navbar-header">
+				<a class="navbar-brand" wicket:id="toTopPage">ICT教育実践データ管理システム</a>
+			</div>
+			<!-- リスト -->
+			<ul class="nav navbar-nav">
+				<li><a wicket:id="toPracticePage">実践</a></li>
+				<li><a wicket:id="toManagePracticePage">実践管理</a></li>
+				<li><a wicket:id="toContentPage">コンテンツ</a></li>
+				<li><a wicket:id="toManageContentPage">コンテンツ管理</a></li>
+				<li><a wicket:id="toEditAccountPage">アカウント編集</a></li>
+				<li><a wicket:id="toManageAccountPage">アカウント管理</a></li>
+				<li><a wicket:id="toLogoutCompletedPage">ログアウト</a></li>
+				<!-- <li><a wicket:id="toTestPage">テスト</a></li>
+				<li><a wicket:id="toTestPageB">テスト2</a></li> -->
+			</ul>
+		</div>
+	</div>
+	<wicket:child />
+
+</body>
+</html>

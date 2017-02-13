@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h4 class="text-center">infomation</h4>
+						</div>
+						<div class="panel-body">
+							<div class="panel panel-info" wicket:id="top">
+								<div class="panel-heading">
+									<h4 class="text-center">実践ページ</h4>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="text-center">
+											<span>
+												<button class="btn btn-default" wicket:id="topLink">実践ページへ戻る</button>
+											</span> <span>
+												<button class="btn btn-default" wicket:id="backLink">前のページへ戻る</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div wicket:id="practiceTreePanel"></div>
+				</div>
+				<div class="col-xs-8">
+					<div class="panel panel-success" wicket:id="search">
+						<div class="panel-heading">
+							<h4 class="text-center">検索結果</h4>
+						</div>
+						<div class="panel-body">
+							<div wicket:id="categoryChoiceLabel"></div>
+							<hr class="practice">
+							<div wicket:id="keywordChoiceLabel"></div>
+							<hr class="practice">
+							<div wicket:id="tagChoiceLabel"></div>
+							<hr class="practice">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<td>Id</td>
+										<td>実践名</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr wicket:id="practiceList">
+										<td><div wicket:id="num"></div></td>
+										<td><div wicket:id="name"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+
+</body>
+</html>

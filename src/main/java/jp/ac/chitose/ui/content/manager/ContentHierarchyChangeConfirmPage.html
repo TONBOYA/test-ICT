@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<h2>コンテンツ階層変更確認ページ</h2>
+					<span>"</span><span wicket:id="beforeHierarchyName"></span><span>"   を   "</span>
+										<span wicket:id="afterHierarchyName"></span><span>"   に移動させます,よろしいですか</span>
+						<div class="row">
+						<div class="col-xs-3">
+							<button class="btn btn-default deleat-practice-button1"
+								wicket:id="toChangeHierarchyCompletedPage">階層を変更する</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org">
+	 -->
+<html xmlns:wicket="http://wicket.apache.org">
+
+<head>
+<title>Title</title>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-10">
+					<div class="col-xs-10">
+						<div class="col-xs-offset-1">
+							<div class="row">
+								<div class="col-xs-offset-1">
+									<h2>アカウントの登録</h2>
+									<p>登録するアカウントの情報を入力してください</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1 backcolor-gray radius-form">
+							<div class="col-xs-offset-2 margin-form">
+								<div wicket:id="feedback"></div>
+								<form wicket:id="form">
+									<div class="row">
+										<p class="col-xs-5">ログインID</p>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-xs-6">
+												<input type="text" class="form-control"
+													wicket:id="loginName" />
+											</div>
+										</div>
+									</div>
+									<br> <br>
+									<div class="row">
+										<p class="col-xs-5">パスワード</p>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-xs-6">
+												<input type="password" class="form-control"
+													wicket:id="passphrase" />
+											</div>
+										</div>
+									</div>
+									<br> <br>
+									<div class="row">
+										<p class="col-xs-5">パスワードの確認</p>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-xs-6">
+												<input type="password" class="form-control"
+													wicket:id="retypedPassphrase" />
+											</div>
+										</div>
+									</div>
+									<br> <br>
+									<div class="row">
+										<p class="col-xs-5">名前</p>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-xs-6">
+												<input type="text" class="form-control" wicket:id="name" />
+											</div>
+										</div>
+									</div>
+									<br> <br>
+									<div class="row">
+										<p class="col-xs-5">所属学校</p>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-xs-6">
+												<input type="text" class="form-control"
+													wicket:id="belongSchool" />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<p>例)千歳科学技術大学</p>
+											<p>正式名称での入力をお願いいたします</p>
+										</div>
+									</div>
+									<br> <br>
+									<div class="row">
+										<p class="col-xs-5">Eメールアドレス</p>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-xs-6">
+												<input type="text" class="form-control"
+													wicket:id="emailAddress" />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<p class="col-xs-5">権限</p>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-xs-12">
+												<span wicket:id="role" class="customcheckbox"></span>
+											</div>
+										</div>
+									</div>
+									<div>
+										<input type="submit" class="btn btn-default" value="次へ進む" />
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+</body>
+</html>

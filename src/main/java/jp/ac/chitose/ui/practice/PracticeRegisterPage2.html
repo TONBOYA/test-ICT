@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend id="contents-nav00">
+		<div class="rows">
+			<div class="container">
+
+
+
+				<div class="col-xs-offset-3 col-xs-2">
+					<div class="panel panel-default text-center">
+						<div class="panel-heading">
+							<h4>ステップ ０１</h4>
+							<p>基本情報の入力</p>
+						</div>
+						<!-- <div class="panel-body">
+							<b>基本情報の入力</b>
+						</div> -->
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="panel panel-primary text-center">
+						<div class="panel-heading">
+							<h4>ステップ ０２</h4>
+						</div>
+						<div class="panel-body">
+							<b>授業内容の入力</b>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="panel panel-default text-center">
+						<div class="panel-heading">
+							<h4>ステップ ０３</h4>
+							<p>入力内容の確認</p>
+						</div>
+						<!-- <div class="panel-body">
+							<b>入力内容の確認</b>
+						</div> -->
+					</div>
+				</div>
+
+				<div class="col-xs-12" wicket:id="feedback"></div>
+			</div>
+			<form wicket:id="form">
+				<!-- <div class="container">
+					<div class="col-xs-6">
+						<div wicket:id="formPanel"></div>
+					</div>
+					<div class="col-xs-6">
+						<div wicket:id="preview"></div>
+					</div>
+				</div> -->
+				<div class="container">
+					<hr class="practice">
+					<span>授業内容の項目数を選択してください</span>
+					<div class="col-xs-12" wicket:id="linkName"></div>
+					<br>
+					<hr class="practice">
+				</div>
+
+				<div class="container">
+					<br>
+					<li><span style="text-decoration: underline"><a href="#contents-nav01" wicket:id="navi01"></a></span></li>
+					<li><span style="text-decoration: underline"><a href="#contents-nav02" wicket:id="navi02"></a></span></li>
+					<li><span style="text-decoration: underline"><a href="#contents-nav03" wicket:id="navi03"></a></span></li>
+					<wicket:enclosure>
+						<li><span style="text-decoration: underline"><a href="#contents-nav04" title="まとめ" wicket:id="navi04"></a></span></li>
+						<br>
+					</wicket:enclosure>
+				</div>
+
+				<div id="contents-nav01" class="container">
+					<div class="col-xs-6">
+						<div wicket:id="unfoForm1"></div>
+						<span style="text-decoration: underline"><a class="col-xs-offset-8" href="#contents-nav00" title="">ページトップへ戻る▲</a></span>
+					</div>
+
+					<div class="panel panel-default col-xs-6">
+						<div class="panel heading">
+							<h4 class="text-center">プレビュー画面</h4>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<span wicket:id="unfoPanel1"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="contents-nav02" class="container">
+					<div class="col-xs-6">
+						<div wicket:id="unfoForm2"></div>
+						<span style="text-decoration: underline"><a class="col-xs-offset-8" href="#contents-nav00" title="">ページトップへ戻る▲</a></span>
+					</div>
+
+					<div class="panel panel-default col-xs-6">
+						<div class="panel heading">
+							<h4 class="text-center">プレビュー画面</h4>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<span wicket:id="unfoPanel2"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="contents-nav03" class="container">
+					<div class="col-xs-6">
+						<div wicket:id="unfoForm3"></div>
+						<span style="text-decoration: underline"><a class="col-xs-offset-8" href="#contents-nav00" title="">ページトップへ戻る▲</a></span>
+					</div>
+
+					<div class="panel panel-default col-xs-6">
+						<div class="panel heading">
+							<h4 class="text-center">プレビュー画面</h4>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<span wicket:id="unfoPanel3"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="contents-nav04" class="container">
+					<wicket:enclosure>
+						<div class="col-xs-6">
+							<div wicket:id="unfoForm4"></div>
+							<span style="text-decoration: underline"><a class="col-xs-offset-8" href="#contents-nav00" title="">ページトップへ戻る▲</a></span>
+						</div>
+					</wicket:enclosure>
+					<wicket:enclosure>
+						<div class="panel panel-default col-xs-6">
+							<div class="panel heading">
+								<h4 class="text-center">プレビュー画面</h4>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<span wicket:id="unfoPanel4"></span>
+								</div>
+							</div>
+						</div>
+					</wicket:enclosure>
+				</div>
+
+				<div class="container">
+					<div>
+						<span>
+							<button class="btn btn-default"
+								wicket:id="returnRegisterPracticePage">ステップ 01へ戻る</button>
+						</span> <span>
+							<button wicket:id="submit" class="btn btn-default">ステップ
+								03へ進む</button>
+						</span>
+					</div>
+				</div>
+			</form>
+		</div>
+		<br>
+		<br>
+	</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,109 @@
+@CHARSET "UTF-8";
+
+.practice-button1{
+	position: absolute;
+	top: 60px;
+	left: 30px;
+}
+
+.practice-button2{
+	position: absolute;
+	top: 60px;
+	left: 190px;
+}
+
+.practice-button3{
+	position: absolute;
+	top: 60px;
+	left: 365px;
+}
+
+.content-button1{
+	position: absolute;
+	top: 60px;
+	left: 30px;
+}
+
+.content-button2{
+	position: absolute;
+	top: 60px;
+	left: 190px;
+}
+.content-button3{
+	position: absolute;
+	top: 60px;
+	left: 420px;
+}
+
+.dataTable{
+	position: absolute;
+	top: 100px;
+}
+
+.deleat-practice-button1{
+	position: absolute;
+	top: 0px;
+	left: 70px;
+}
+
+.deleat-practice-button2{
+	position: absolute;
+	top: 0px;
+	left: 140px;
+}
+
+.title-label{
+	position: relative;
+	left: 35px;
+}
+
+.hierarchy-label{
+	position: absolute;
+	top: 30px;
+	left: 0px;
+}
+
+.hierarchy-space{
+	position: absolute;
+	left: 50px;
+}
+
+.hierarchy-data-table{
+	position: absolute;
+	top: 80px;
+}
+
+.hierarchy-button{
+	position: absolute;
+	top: 40px;
+	left: 30px;
+}
+
+.change-hierarchy-button{
+	position: absolute;
+	top: 100px;
+	left: 200px;
+}
+
+.unfolding{
+	position: absolute;
+}
+
+.search-button{
+	right:-140px;
+}
+
+.return-search-button{
+	position: absolute;
+	right:140px;
+}
+
+.box {
+	float: right;
+}
+.appIconBig{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+

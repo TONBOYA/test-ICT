@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+
+	<wicket:extend>
+		<div class="container">
+			<div class="rows">
+				<!-- <p>現在の階層</p>
+				<span class="col-xs-12" wicket:id="path"></span> <br> <br> -->
+				<div wicket:id="feedback"></div>
+				<form wicket:id="form">
+					<div class="col-xs-6">
+						<div wicket:id="panel"></div>
+
+						<div>
+
+							<table wicket:id="table" style="width: 100%">
+								<tr>
+									<td><h4>登録されているファイル名</h4></td>
+									<td><h4>更新日</h4></td>
+								</tr>
+								<tr wicket:id="uploadList">
+									<td style="width: 200px" wicket:id="fileName"></td>
+									<td wicket:id="uploadTime">2008/03/30</td>
+								</tr>
+							</table>
+							アップロードファイル: <input type="file" wicket:id="uploadField" />
+							<br><br>
+							<button wicket:id="submit" class="btn btn-default">コンテンツデータの編集を決定する</button>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div wicket:id="preview"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br>
+		<br>
+	</wicket:extend>
+
+
+
+
+	<!--<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-6">
+					<p>コンテンツ編集画面</p>
+
+					<p>編集したいコンテンツの情報を入力してください</p>
+
+					<div class="row">
+						<p class="col-xs-5">現在の階層</p>
+						<p class="col-xs-4">中学3年/理科</p>
+					</div>
+
+					<form>
+						<div class="row">
+							<p class="col-xs-5">コンテンツ名</p>
+							<div class="form-group">
+								<div class="col-xs-4">
+									<input type="text" class="form-control" value="登録名">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<p class="col-xs-5">検索用キーワード</p>
+							<br>
+							<div class="row">
+								<div class="col-xs-3">
+									<div class="checkbox">
+										<label><input type="checkbox" checked="checked">タブレット</label>
+									</div>
+									<div class="checkbox">
+										<label><input type="checkbox">電子黒板</label>
+									</div>
+									<div class="checkbox">
+										<label><input type="checkbox" checked="checked">生徒配布用</label>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<button type="button" class="btn btn-default">アップロードされたファイルを変更する場合はこちら</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<p class="col-xs-5">アップロードするファイル</p>
+							<input type="file" name="contents-file" size="15">
+						</div>
+
+						<div class="row">
+							<button type="button" class="btn btn-default"
+								wicket:id="toEditContentConfirmPage">コンテンツを変更する</button>
+						</div>
+					</form>
+
+
+
+				</div>
+
+			</div>
+		</div>
+	</wicket:extend>  -->
+</body>
+</html>

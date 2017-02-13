@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-8">
+					<div class="row">
+						<div class="panel panel-info" wicket:id="content">
+							<div class="panel-heading">
+							<h4 wicket:id="deleteRequest"></h4>
+								<h4 class="text-center" wicket:id="name"></h4>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>投稿者</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<span wicket:id="author"></span>
+									</div>
+								</div>
+								<hr class="content">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>キーワード</h4>
+									</div>
+									<table class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<td class="col-xs-10 col-xs-offset-1"><span
+													wicket:id="keyword"></span></td>
+											</tr>
+											<tr>
+												<td class="col-xs-6"><button class="btn btn-default"
+														wicket:id="toPracticePageForDistribution">関連付けた実践を見る</button></td>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+								<hr class="content">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>ファイル名</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<span wicket:id="fileName"></span>
+									</div>
+								</div>
+								<hr class="content">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>使い方</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<span wicket:id="howToUse"></span>
+									</div>
+								</div>
+								<hr class="content">
+								<table wicket:id="table" style="width: 100%">
+									<tr>
+										<td><h4>ダウンロードリンク</h4></td>
+										<td><h4>更新日</h4></td>
+									</tr>
+									<tr wicket:id="uploadList">
+										<td style="width: 200px"><a wicket:id="downloadLink">
+												<span wicket:id="fileName">a.txt</span>
+										</a></td>
+										<td wicket:id="uploadTime">2008/03/30</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+</body>
+</html>

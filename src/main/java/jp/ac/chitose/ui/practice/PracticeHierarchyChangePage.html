@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="title-label">
+			<h2>階層変更ページ</h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-8">
+					<div wicket:id="feedback"></div>
+					<form wicket:id="form">
+						<div class="row">
+							<div class="hierarchy-button">
+								<button class="btn btn-default" wicket:id="toOneLevelUp">一つ上の階層に戻る</button>
+							</div>
+						</div>
+						<div wicket:id="checkGroup">
+							<table class="table table-striped table-bordered hierarchy-data-table">
+								<thead>
+								<tr>
+								<td><span>現在の階層は   "</span><span wicket:id="hierarchyName"></span><span>"   です</span></td>
+										<td wicket:id="changeHierarchy"><button
+												class="btn btn-default">この階層に変更する</button></td>
+
+									</tr>
+									<tr>
+									<td>タイプ</td>
+										<td>名称</td>
+										</tr>
+								</thead>
+								<tbody>
+									<tr wicket:id="hierarchy">
+										<td wicket:id="type"></td>
+										<td><div wicket:id="name"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+</body>
+</html>

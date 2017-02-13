@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="rows">
+			<div class="container">
+				<h4>ステップ1 >> ステップ2 : 各項目を記入してください</h4><br>
+				<!-- <div wicket:id="feedback"></div> -->
+			</div>
+			<form wicket:id="form">
+				<div class="container">
+					<div class="col-xs-10">
+					<div wicket:id="formPanel"></div>
+						<span>授業内容の項目数を選択してください</span>
+						<div wicket:id="linkName"></div>
+					</div>
+				</div>
+				<div class="container" wicket:id="unfoldingList">
+					<div class="col-xs-10">
+						<span wicket:id="formPanel"></span>
+					</div>
+				</div>
+				<div class="container">
+					<div>
+						<button wicket:id="submit" class="btn btn-default">実践を投稿する</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<br>
+		<br>
+	</wicket:extend>
+</body>
+</html>

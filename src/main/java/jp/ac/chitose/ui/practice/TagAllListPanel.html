@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<wicket:panel>
+		<div class="row">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="text-center">キーワード　一覧</div>
+				</div>
+				<div class="panel-body">
+					<table>
+						<thead>
+						</thead>
+						<tbody>
+							<wicket:container wicket:id="rowListView">
+
+								<tr align="center">
+									<td wicket:id="columnListView" style="width: 60px;">
+										<div>
+											<span style="color: #888888;" wicket:id="dataLabel">ここにデータラベルが入る</span>
+										</div>
+									</td>
+								</tr>
+
+							</wicket:container>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</wicket:panel>
+
+</body>
+</html>

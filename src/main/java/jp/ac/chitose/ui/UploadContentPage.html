@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-6">
+					<p>コンテンツ登録画面</p>
+
+					<p>アップロードしたいコンテンツのコンテンツ名を入力しファイルを選択してください。</p>
+
+					<div class="row">
+						<p class="col-xs-5">アップロード予定の階層</p>
+						<p class="col-xs-4">中学3年/理科</p>
+					</div>
+
+					<form>
+						<div class="row">
+							<p class="col-xs-5">コンテンツ名</p>
+							<div class="form-group">
+								<div class="col-xs-4">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<p class="col-xs-5">検索用キーワード</p>
+							<br>
+							<div class="row">
+								<div class="col-xs-3">
+									<div class="checkbox">
+										<label><input type="checkbox">タブレット</label>
+									</div>
+									<div class="checkbox">
+										<label><input type="checkbox">電子黒板</label>
+									</div>
+									<div class="checkbox">
+										<label><input type="checkbox">生徒配布用</label>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="row">
+							<p class="col-xs-5">アップロードするファイル</p>
+							<input type="file" name="contents-file" size="15">
+						</div>
+
+						<div class="row">
+							<button type="button" class="btn btn-default"
+								wicket:id="toUploadContentConfirmPage">アップロードする</button>
+						</div>
+					</form>
+
+
+
+				</div>
+
+			</div>
+		</div>
+	</wicket:extend>
+</body>
+</html>

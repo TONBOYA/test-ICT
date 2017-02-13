@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<wicket:panel>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel heading">
+					<h4 class="text-center">プレビュー画面</h4>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h4 class="text-center" wicket:id="name"></h4>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>投稿者</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<span wicket:id="account"></span>
+									</div>
+								</div>
+								<hr class="practice">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>使用したICT機器</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<span wicket:id="keyword"><span
+											wicket:id="keywordLabel"></span><span> </span></span>
+									</div>
+								</div>
+								<hr class="practice">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>検索用キーワード</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<table class="table table-striped table-bordered">
+											<thead>
+												<tr>
+													<th>キーワード1</th>
+													<th>キーワード2</th>
+													<th>キーワード3</th>
+												</tr>
+											</thead>
+											<tbody>
+												<th wicket:id="tag1"></th>
+												<th wicket:id="tag2"></th>
+												<th wicket:id="tag3"></th>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<hr class="practice">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>本時のICT活用</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<span wicket:id="summary"></span>
+									</div>
+								</div>
+								<hr class="practice">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>本時の学習課題</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<span wicket:id="challenge"></span>
+									</div>
+								</div>
+								<!-- <hr class="practice">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>本時の展開</h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-10 col-xs-offset-1">
+											<div wicket:id="unfoldingList">
+												<span wicket:id="panel"></span>
+											</div>
+									</div>
+								</div> -->
+								<hr class="practice">
+								<div class="row">
+									<div class="col-xs-6">
+										<h4>生徒の反応</h4>
+									</div>
+									<div class="col-xs-10 col-xs-offset-1">
+										<span wicket:id="reaction"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:panel>
+
+</body>
+</html>

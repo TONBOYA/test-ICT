@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<wicket:panel>
+		<h3 wicket:id="name" style="display: inline"></h3>
+		<h4 style="display: inline">
+			<span wicket:id="requiredMinute"></span> 分
+		</h4>
+		<div class="row">
+			<table class="customtable customtable-bordered">
+				<thead>
+					<tr>
+						<td class="col-xs-6">授業内容</td>
+						<td class="col-xs-6">指導のポイント</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					<td><span wicket:id="instruction"></span>
+
+					<div class="col-xs-12" wicket:id="image"></div></td>
+
+						<!-- <td><span wicket:id="instruction"></span>
+							<div class="row">
+								<wicket:enclosure>
+									<div class="col-xs-5">
+										<img wicket:id="firstScene" width="50" height="50">
+									</div>
+								</wicket:enclosure>
+
+								<wicket:enclosure>
+									<div class="col-xs-5">
+										<img wicket:id="secondScene" width="50" height="50">
+									</div>
+								</wicket:enclosure>
+							</div></td> -->
+						<td wicket:id="specialInstruction"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<br>
+	</wicket:panel>
+
+</body>
+</html>

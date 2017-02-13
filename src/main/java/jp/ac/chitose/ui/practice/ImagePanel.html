@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<script>
+		Wicket.Window.unloadConfirmation = false;
+	</script>
+
+	<wicket:panel>
+		<div class="row">
+			<form wicket:id="form">
+				<div wicket:id="modal"></div>
+				<table class="customtable customtable-bordered"
+					wicket:id="imageContener">
+					<thead>
+						<tr>
+							<wicket:enclosure child="firstScene">
+								<wicket:enclosure child="firstBtn">
+									<td align="center">
+										<div>
+											<img wicket:id="firstScene" width="100" height="100">
+										</div>
+										<div>
+											<input type="button" value="拡大" wicket:id="firstBtn" />
+										</div>
+									</td>
+								</wicket:enclosure>
+							</wicket:enclosure>
+							<wicket:enclosure child="secondScene">
+								<wicket:enclosure child="secondBtn">
+									<td align="center">
+										<div>
+											<img wicket:id="secondScene" width="100" height="100">
+										</div>
+										<div>
+											<input type="button" value="拡大" wicket:id="secondBtn" />
+										</div>
+									</td>
+								</wicket:enclosure>
+							</wicket:enclosure>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<!-- <td align="center" class="col-xs-6"><input type="button"
+								value="拡大1" wicket:id="firstBtn" /></td>
+							<td align="center" class="col-xs-6"><input type="button"
+								value="拡大2" wicket:id="secondBtn" /></td> -->
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<br>
+	</wicket:panel>
+</body>
+</html>

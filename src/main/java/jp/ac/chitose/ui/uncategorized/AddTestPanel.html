@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<wicket:panel>
+		<div class="row">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h4 class="text-center">入力フォーム</h4>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<span class="col-xs-5">授業名 (必須入力)</span>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input type="text" class="form-control" wicket:id="name"
+									placeholder="例： 原子と分子" />
+							</div>
+						</div>
+					</div>
+					<br> <br>
+					<div class="row">
+						<span class="col-xs-6">使用したICT機器(必須入力)</span>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-xs-12">
+								<span wicket:id="keyword" class="customcheckbox"></span>
+							</div>
+						</div>
+					</div>
+					<br> <br>
+					<div class="row">
+						<span class="col-xs-12">検索用キーワード(必須入力) ※連続で同じ単語を入れないでください</span>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th>キーワード1</th>
+										<th>キーワード2</th>
+										<th>キーワード3</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th><input type="text" placeholder="例： 理科"
+											class="form-control" wicket:id="tag1" /></th>
+										<th><input type="text" placeholder="例： 科学"
+											class="form-control" wicket:id="tag2" /></th>
+										<th><input type="text" placeholder="例： 原子"
+											class="form-control" wicket:id="tag3" /></th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<button wicket:id="link">
+								<span wicket:id="label"></span>
+							</button>
+						</div>
+						<br> <br>
+						<div class="col-xs-12">
+							<div wicket:id="conditionPanel"></div>
+						</div>
+					</div>
+					<br> <br>
+					<div class="row">
+						<span class="col-xs-10">実施日 (必須入力、本日以降の日付は選択できません)</span> <br>
+						<span class="col-xs-10">カレンダーのボタンを押して日付を選択してください</span>
+						<div class="form-group">
+							<div class="col-xs-6">
+								<input type="text" wicket:id="startOn" class="form-control"
+									readonly="readonly" />
+							</div>
+						</div>
+					</div>
+
+					<br> <br>
+				</div>
+			</div>
+		</div>
+	</wicket:panel>
+
+</body>
+</html>

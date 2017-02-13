@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="container">
+			<div class="rows">
+				<!-- <p>現在の階層:</p>
+				<span class="col-xs-12" wicket:id="path"></span> <br> -->
+				<br>
+				<div wicket:id="feedback"></div>
+				<form wicket:id="form">
+					<div class="col-xs-6">
+						<div wicket:id="panel"></div>
+						<div>
+							アップロードファイル: <input type="file" wicket:id="uploadField" />
+							<br>
+							<button wicket:id="submit" class="btn btn-default">コンテンツデータを投稿</button>
+						</div>
+						<br> <br>
+					</div>
+					<div class="col-xs-6">
+						<div wicket:id="preview"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br>
+		<br>
+	</wicket:extend>
+
+</body>
+</html>

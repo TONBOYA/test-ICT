@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">
+					<h2 class="text-center">コンテンツページ</h2>
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h4 class="text-center">infomation</h4>
+						</div>
+						<div class="panel-body">
+							<div class="panel panel-success" wicket:id="search">
+								<div class="panel-heading">
+									<h4 class="text-center">コンテンツ検索</h4>
+								</div>
+								<div class="panel-body" style="background: #FEFEFF">
+									<div class="row">
+										<div class="text-center">
+											<button class="btn btn-default" wicket:id="searchLink">検索を開始する</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div wicket:id="contentTreePanel"></div>
+				</div>
+				<br>
+				<div wicket:id="contentPanel"></div>
+			</div>
+		</div>
+	</wicket:extend>
+</body>
+</html>

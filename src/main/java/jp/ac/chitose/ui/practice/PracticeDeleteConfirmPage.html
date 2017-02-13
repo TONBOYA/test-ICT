@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<h2>実践削除確認ページ</h2>
+					<p>現在の階層</p>
+					<p wicket:id="path"></p>
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+								<td>実践名</td>
+								<td>投稿者</td>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr wicket:id="practiceList">
+								<td wicket:id="name"></td>
+								<td wicket:id="editor"></td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="row">
+						<div class="col-xs-3">
+							<button class="btn btn-default deleat-practice-button1" wicket:id="toDeletePracticeCompletedPage">実践を削除する</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="btn btn-default deleat-practice-button2" wicket:id="returnManagePracticePage">選び直す</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:extend>
+
+</body>
+</html>

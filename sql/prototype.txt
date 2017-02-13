@@ -1,0 +1,77 @@
+CREATE TABLE account (
+	account_id serial PRIMARY KEY,
+	login_name text NOT NULL UNIQUE,
+	passphrase text NOT NULL
+);
+
+CREATE TABLE personal (
+	account_id integer PRIMARY KEY,
+	name text NOT NULL,
+	belong_school text,
+	email_address text,
+	FOREIGN KEY (account_id) 
+		REFERENCES account(account_id)
+);
+
+CREATE TABLE practice (
+	practice_id serial PRIMARY KEY,
+	name text NOT NULL,
+	summary text NOT NULL,
+	aim text NOT NULL,
+	reaction text NOT NULL,
+	start_on date NOT NULL,
+	account_id integer NOT NULL,
+	FOREIGN KEY (account_id)
+		REFERENCES account(account_id)
+);
+
+CREATE TABLE practice_keyword (
+	practice_id integer,
+	keyword text NOT NULL,
+	FOREIGN KEY (practice_id)
+		REFERENCES practice(practice_id),
+	PRIMARY KEY(practice_id,keyword)
+);
+
+CREATE TABLE unfolding (
+	unfolding_id serial PRIMARY KEY,
+	practice_id integer NOT NULL,
+	ordinal integer NOT NULL,
+	name text NOT NULL,
+	required_minute integer NOT NULL,
+	instruction text NOT NULL,
+	special_instruction text NOT NULL,
+	FOREIGN KEY (practice_id)
+		REFERENCES practice(practice_id),
+	UNIQUE(practice_id,ordinal)
+);
+
+CREATE TABLE scene (
+	unfolding_id integer NOT NULL,
+	path text NOT NULL,
+	FOREIGN KEY (unfolding_id)
+		REFERENCES unfolding(unfolding_id),
+	PRIMARY KEY(unfolding_id,path)
+);
+
+
+INSERT INTO account (login_name,passphrase)
+	VALUES ('test','test');
+
+INSERT INTO personal (account_id,name,belong_school,email_address)
+	VALUES (1,'テスト','千歳科学技術大学','aa@gmail.com');
+
+INSERT INTO practice (name,summary,aim,reaction,start_on,practice_hierarchy_id,account_id)
+	VALUES ('サヤエンドウ','班で話し合った結果を実物投影機で電子黒板上に投影して、考えを発表し、学習を深め合う。','サヤエンドウのつくりを花の作りから考えさせる。','協働学習、アクティブラーニングが盛んに行われていた。',2,'2015-09-29',1);
+
+INSERT INTO practice_keyword (practice_id,keyword)
+	VALUES (1,'実物投影機');
+
+INSERT INTO unfolding (practice_id,ordinal,name,required_minute,instruction,special_instruction)
+	VALUES (1,1,'導入',10,'◯花のつくりについての小テスト\n\n◯サヤエンドウは花から実に成長した姿である事を説明する。\n・サヤエンドウを使った料理を提示して、調理前のサヤエンドウがどのような姿をしているか考える。',''),
+		   (1,2,'展開',30,'  サヤエンドウの作りを\n  　花のつくりから考えよう\n\n◯「花びら、胚珠、子房、がく」など、花のつくりを記入して、サヤエンドウのノートに各自記入する。\n・花のつくりの学習を想起しながら、各自予想を記入して、班で発表し合い、ひとつの考えにまとめる。\n\n◯幾つかの班の考えを実物投影機で投影して、生徒が電子黒板を活用して発表する。\n班の考えをわかりやすく説明できるよう準備させておく。',''),
+		   (1,3,'まとめ',10,'◯サヤエンドウを配り、スケッチをしながら各部分を確認する。','');
+
+INSERT INTO scene (unfolding_id,path)
+	VALUES (2,image/sayaendo1.jpg),
+		   (2,image.sayaendo2.jpg);

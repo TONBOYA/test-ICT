@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="rows">
+			<div class="container">
+				<!-- <p>現在の階層</p>
+				<span class="col-xs-12" wicket:id="path"></span> -->
+
+				<div class="col-xs-offset-3 col-xs-2">
+					<div class="panel panel-primary text-center">
+						<div class="panel-heading">
+							<h4>ステップ ０１</h4>
+							<!-- <b>授業内容の入力</b> -->
+						</div>
+						<div class="panel-body">
+							<b>基本情報の入力</b>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="panel panel-default text-center">
+						<div class="panel-heading">
+							<h4>ステップ ０２</h4>
+							<b>授業内容の入力</b>
+						</div>
+						<!-- <div class="panel-body">
+							<b>授業内容の入力</b>
+						</div> -->
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="panel panel-default text-center">
+						<div class="panel-heading">
+							<h4>ステップ ０３</h4>
+							<b>入力内容の確認</b>
+						</div>
+						<!-- <div class="panel-body">
+							<b>入力内容の確認</b>
+						</div> -->
+					</div>
+				</div>
+				<div class="col-xs-12" wicket:id="feedback"></div>
+			</div>
+			<form wicket:id="form">
+				<div class="container">
+					<div class="col-xs-6">
+						<div wicket:id="formPanel"></div>
+					</div>
+					<div class="col-xs-6">
+						<div wicket:id="preview"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div>
+						<button wicket:id="submit" class="btn btn-default">ステップ 02へ進む</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<br>
+		<br>
+	</wicket:extend>
+</body>
+</html>

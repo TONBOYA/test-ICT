@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Title</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<wicket:extend>
+		<div class="container">
+			<div wicket:id="feedback"></div>
+			<form wicket:id="form">
+				<div class="row">
+					<p>現在の階層</p>
+					<span wicket:id="path"></span> <br> <br>
+
+					<div class="col-xs-6">
+
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h4 class="text-center">実践入力フォーム</h4>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<span class="col-xs-5">実践名</span>
+								</div>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-xs-10">
+											<input type="text" class="form-control"
+												wicket:id="practiceName" />
+										</div>
+									</div>
+								</div>
+								<br> <br>
+								<div class="row">
+									<span class="col-xs-5">キーワード</span>
+								</div>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-xs-10">
+											<span wicket:id="keyword" class="customcheckbox"></span>
+										</div>
+									</div>
+								</div>
+								<br> <br>
+
+								<div class="row">
+									<span class="col-xs-10">実践日</span>
+									<div class="form-group">
+										<div class="col-xs-10">
+											<input type="text" wicket:id="startOn" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<span class="col-xs-10">本時ではICTのどのような活用を行いましたか</span>
+								</div>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-xs-10">
+											<textarea class="form-control" wicket:id="summary"></textarea>
+										</div>
+									</div>
+								</div>
+								<br> <br>
+								<div class="row">
+									<span class="col-xs-10">本時のめあてはどのようなものでしたか</span>
+								</div>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-xs-10">
+											<textarea class="form-control" wicket:id="aim"></textarea>
+										</div>
+									</div>
+								</div>
+								<br> <br>
+								<div class="row">
+									<p class="col-xs-3">本時の展開</p>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<p class="text-center">展開(1/3)</p>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">展開名(1/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<input type="text" class="form-control"
+														wicket:id="firstUnfoldingName" />
+												</div>
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">展開の時間(1/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-4 col-xs-offset-1">
+													<select class="selectpicker"
+														wicket:id="firstUnfoldingRequiredMinute">
+														<option>5</option>
+														<option>10</option>
+														<option>15</option>
+														<option>20</option>
+														<option>25</option>
+														<option>30</option>
+														<option>35</option>
+														<option>40</option>
+														<option>45</option>
+														<option>50</option>
+														<option>55</option>
+														<option>60</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">展開の内容(1/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<textarea class="form-control"
+														wicket:id="firstUnfoldingInstruction"></textarea>
+												</div>
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-5 col-xs-offset-1">展開に画像を添付</span>
+										</div>
+										<div class="row">
+											<div class="col-xs-offset-1">
+												<span class="col-xs-2">1枚目</span> <input type="file"
+													name="contents-file"
+													wicket:id="firstSceneForFirstUnfolding" size="15">
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<div class="col-xs-offset-1">
+												<span class="col-xs-2">2枚目</span> <input type="file"
+													name="contents-file"
+													wicket:id="secondSceneForFirstUnfolding" size="15">
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">指導のポイント(1/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<textarea class="form-control"
+														wicket:id="firstUnfoldingSpecialInstruction"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br> <br>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<p class="text-center">展開(2/3)</p>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<p class="col-xs-3 col-xs-offset-1">展開名(2/3)</p>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<input type="text" class="form-control"
+														wicket:id="secondUnfoldingName" />
+												</div>
+											</div>
+										</div>
+										<br> <br> <br>
+										<div class="row">
+											<p class="col-xs-3 col-xs-offset-1">展開の時間(2/3)</p>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-4 col-xs-offset-1">
+													<select class="selectpicker"
+														wicket:id="secondUnfoldingRequiredMinute">
+														<option>5</option>
+														<option>10</option>
+														<option>15</option>
+														<option>20</option>
+														<option>25</option>
+														<option>30</option>
+														<option>35</option>
+														<option>40</option>
+														<option>45</option>
+														<option>50</option>
+														<option>55</option>
+														<option>60</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<p class="col-xs-3 col-xs-offset-1">展開の内容(2/3)</p>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<textarea class="form-control"
+														wicket:id="secondUnfoldingInstruction"></textarea>
+												</div>
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-5 col-xs-offset-1">展開に画像を添付</span>
+										</div>
+										<div class="row">
+											<div class="col-xs-offset-1">
+												<span class="col-xs-2">1枚目</span> <input type="file"
+													name="contents-file"
+													wicket:id="firstSceneForSecondUnfolding" size="15">
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<div class="col-xs-offset-1">
+												<span class="col-xs-2">2枚目</span> <input type="file"
+													name="contents-file"
+													wicket:id="secondSceneForSecondUnfolding" size="15">
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">指導のポイント(2/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<textarea class="form-control"
+														wicket:id="secondUnfoldingSpecialInstruction"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br> <br>
+
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<p class="text-center">展開(3/3)</p>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">展開名(3/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<input type="text" class="form-control"
+														wicket:id="thirdUnfoldingName" />
+												</div>
+											</div>
+										</div>
+										<br> <br> <br>
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">展開の時間(3/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-4 col-xs-offset-1">
+													<select class="selectpicker"
+														wicket:id="thirdUnfoldingRequiredMinute">
+														<option>5</option>
+														<option>10</option>
+														<option>15</option>
+														<option>20</option>
+														<option>25</option>
+														<option>30</option>
+														<option>35</option>
+														<option>40</option>
+														<option>45</option>
+														<option>50</option>
+														<option>55</option>
+														<option>60</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">展開の内容(3/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<textarea class="form-control"
+														wicket:id="thirdUnfoldingInstruction"></textarea>
+												</div>
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-5 col-xs-offset-1">展開に画像を添付</span>
+										</div>
+										<div class="row">
+											<div class="col-xs-offset-1">
+												<span class="col-xs-2">1枚目</span> <input type="file"
+													name="contents-file"
+													wicket:id="firstSceneForThirdUnfolding" size="15">
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<div class="col-xs-offset-1">
+												<span class="col-xs-2">2枚目</span> <input type="file"
+													name="contents-file"
+													wicket:id="secondSceneForThirdUnfolding" size="15">
+											</div>
+										</div>
+										<br> <br>
+										<div class="row">
+											<span class="col-xs-3 col-xs-offset-1">指導のポイント(3/3)</span>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-xs-9 col-xs-offset-1">
+													<textarea class="form-control"
+														wicket:id="thirdUnfoldingSpecialInstruction"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br> <br>
+
+								<div class="row">
+									<span class="col-xs-5">生徒の反応はどうでしたか</span>
+								</div>
+								<div class="row">
+									<div class="form-group">
+										<div class="col-xs-10">
+											<textarea class="form-control" wicket:id="reaction"></textarea>
+										</div>
+									</div>
+								</div>
+								<br> <br>
+
+								<div>
+									<button type="submit" class="btn btn-default">実践を登録</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="text-center">実践プレビュー</h4>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="panel panel-info">
+										<h4 class="text-center" wicket:id="previewName"></h4>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-xs-6">
+												<h4>キーワード</h4>
+											</div>
+											<div class="col-xs-10 col-xs-offset-1">
+												<span wicket:id="previewKeyword"></span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-6">
+												<h4>実施日</h4>
+											</div>
+											<div class="col-xs-10 col-xs-offset-1">
+												<span wicket:id="previewStartOn"></span>
+											</div>
+										</div>
+
+										<hr class="practice">
+										<div class="row">
+											<div class="col-xs-6">
+												<h4>本時のICT活用</h4>
+											</div>
+											<div class="col-xs-10 col-xs-offset-1">
+												<span wicket:id="previewSummary"></span>
+											</div>
+										</div>
+										<hr class="practice">
+										<div class="row">
+											<div class="col-xs-6">
+												<h4>本時のめあて</h4>
+											</div>
+											<div class="col-xs-10 col-xs-offset-1">
+												<span wicket:id="previewAim"></span>
+											</div>
+										</div>
+										<hr class="practice">
+										<div class="row">
+											<div class="col-xs-6">
+												<h4>本時の展開</h4>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-10 col-xs-offset-1">
+												<table>
+													<tr>
+														<td><h3 wicket:id="previewFirstUnfoldingName" style="display: inline"></h3>
+															<h4 style="display: inline">
+																<span wicket:id="previewFirstUnfoldingRequiredMinute"></span>分
+															</h4>
+															<div class="row">
+																<table class="customtable customtable-bordered">
+																	<thead>
+																		<tr>
+																			<td class="col-xs-6">授業内容</td>
+																			<td class="col-xs-6">指導のポイント</td>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td><span wicket:id="previewFirstUnfoldingInstruction"></span>
+																				<table>
+																					<tr>
+																					</tr>
+																				</table></td>
+																			<td wicket:id="previewFirstUnfoldingSpecialInstruction"></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div> <br></td>
+													</tr>
+													<tr>
+														<td><h3 wicket:id="previewSecondUnfoldingName" style="display: inline"></h3>
+															<h4 style="display: inline">
+																<span wicket:id="previewSecondUnfoldingRequiredMinute"></span>分
+															</h4>
+															<div class="row">
+																<table class="customtable customtable-bordered">
+																	<thead>
+																		<tr>
+																			<td class="col-xs-6">授業内容</td>
+																			<td class="col-xs-6">指導のポイント</td>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td><span wicket:id="previewSecondUnfoldingInstruction"></span>
+																				<table>
+																					<tr>
+																					</tr>
+																				</table></td>
+																			<td wicket:id="previewSecondUnfoldingSpecialInstruction"></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div> <br></td>
+													</tr>
+													<tr>
+														<td><h3 wicket:id="previewThirdUnfoldingName" style="display: inline"></h3>
+															<h4 style="display: inline">
+																<span wicket:id="previewThirdUnfoldingRequiredMinute"></span>分
+															</h4>
+															<div class="row">
+																<table class="customtable customtable-bordered">
+																	<thead>
+																		<tr>
+																			<td class="col-xs-6">授業内容</td>
+																			<td class="col-xs-6">指導のポイント</td>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td><span wicket:id="previewThirdUnfoldingInstruction"></span>
+																				<table>
+																					<tr>
+																					</tr>
+																				</table></td>
+																			<td wicket:id="previewThirdUnfoldingSpecialInstruction"></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div> <br></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+										<hr class="practice">
+										<div class="row">
+											<div class="col-xs-6">
+												<h4>生徒の反応</h4>
+											</div>
+											<div class="col-xs-10 col-xs-offset-1">
+												<span wicket:id="previewReaction"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</wicket:extend>
+
+</body>
+</html>
